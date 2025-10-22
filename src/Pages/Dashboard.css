@@ -1,0 +1,73 @@
+.dashboard {
+ min-height: 100vh;
+ background: radial-gradient(circle at top, #23284d, #0e1026);
+ color: #e0e0f0;
+ font-family: 'Poppins', sans-serif;
+ padding: 80px 40px;
+ text-align: center;
+}
+
+.dashboard-header h1 {
+ font-size: 2.2rem;
+ color:  #4dabf7;
+}
+
+.dashboard-header p {
+ color: #b0b0c3;
+}
+
+.logout-btn {
+ background: transparent;
+ border: 2px solid #2ef7e1;
+ padding: 10px 25px;
+ border-radius: 12px;
+ color: #2ef7e1;
+ margin-bottom: 40px;
+ height:50px;
+ font-weight: bold;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+.logout-btn:hover {
+ background: #2ef7e1;
+ color: #12152b;
+}
+
+.dashboard-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 25px;
+ justify-content: center;
+ align-items: stretch;
+}
+
+.dash-card {
+ background: rgba(255, 255, 255, 0.05);
+ border-radius: 16px;
+ padding: 25px;
+ box-shadow: 0 0 20px rgba(255, 79, 193, 0.2);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dash-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 0 25px rgba(46, 247, 225, 0.4);
+}
+
+.btn {
+ background: linear-gradient(90deg, #ff4fc1, #2ef7e1);
+ color: #fff;
+ border: none;
+ border-radius: 10px;
+ padding: 10px 25px;
+ font-weight: bold;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+.btn:hover {
+ filter: brightness(1.2);
+}
+
+

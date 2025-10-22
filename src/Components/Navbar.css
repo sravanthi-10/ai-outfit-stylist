@@ -1,0 +1,115 @@
+/* Navbar.css */
+.navbar {
+ background: linear-gradient(90deg, #1a1f3d, #12152b);
+ padding: 1rem 2rem;  
+ box-shadow: 0 4px 15px rgba(46,247,225,0.2);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+}
+
+.navbar-container {
+ display: flex;
+ justify-content: space-between; /* Brand left, links right */
+ align-items: center;
+ width: 100%;
+}
+
+.navbar-brand {
+ color: #ff4fc1;
+ font-weight: bold;  
+ font-size: 1.5rem;
+ text-decoration: none;
+}
+
+.nav-links {
+ list-style: none;
+ display: flex;
+ gap: 20px; 
+}
+
+.nav-links li a {
+ color: #f0f0f5;
+ text-decoration: none;
+ font-weight: 500;
+ padding: 5px 10px;
+ border-radius: 8px;
+ transition: 0.3s;
+}
+
+.nav-links li a:hover {
+ color: #2ef7e1;
+ background: rgba(46,247,225,0.1);
+}
+
+.nav-links li a.active {
+ color: #ff4fc1;
+ background: rgba(255,79,193,0.2);
+}
+
+/* Hamburger for mobile */
+#toggle {
+ display: none;
+}
+
+.hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+}
+
+.hamburger span {
+ width: 25px;
+ height: 3px;
+ background: #ff4fc1;
+ border-radius: 50%;
+}
+
+/* 🛒 Cart Badge Styling */
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #12152b;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  #toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}

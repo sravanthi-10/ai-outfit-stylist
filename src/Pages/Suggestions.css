@@ -1,0 +1,68 @@
+.suggestions-page {
+ background: linear-gradient(135deg, #0a0e2a, #1b1f39);
+ min-height: 100vh;
+ color: #fff;
+ padding: 2rem;
+ text-align: center;
+ font-family: 'Poppins', sans-serif;
+}
+
+.suggestions-page h2 {
+ color:  #4dabf7;
+ font-size: 3rem;
+ margin-bottom: 2rem;
+}
+
+.suggestions-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 2rem;
+ justify-items: center;
+}
+
+.suggestion-card {
+ background: #24294e;
+ border-radius: 15px;
+ box-shadow: 0 0 20px rgba(46, 247, 225, 0.3);
+ overflow: hidden;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ text-align: left;
+ max-width: 380px;
+}
+
+.suggestion-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 0 30px rgba(255, 79, 193, 0.5);
+}
+
+.suggestion-card img {
+ width: 100%;
+ height: 450px;
+ object-fit: cover;
+}
+
+.suggestion-content {
+ padding: 1rem 1.5rem;
+}
+
+.suggestion-content h3 {
+ color: #ff4fc1;
+ margin-bottom: 0.5rem;
+}
+
+.suggestion-content p {
+ font-size: 0.95rem;
+ line-height: 1.6;
+ color: #e0e0e0;
+}
+
+.suggestion-content small {
+ display: block;
+ margin-top: 0.8rem;
+ color: #9aa2d0;
+}
+
+.empty-msg {
+ color: #ccc;
+ margin-top: 3rem;
+}

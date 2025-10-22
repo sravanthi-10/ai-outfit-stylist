@@ -1,0 +1,144 @@
+.closet-page {
+ background: linear-gradient(135deg, #1b1f39, #0a0e2a);
+ min-height: 100vh;
+ color: #fff;
+ padding: 2rem;
+ font-family: 'Poppins', sans-serif;
+ text-align: center;
+}
+
+.closet-page h2 {
+ color: #4dabf7;
+ font-size: 3rem;
+ margin-bottom: 2rem;
+}
+
+.closet-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 2rem;
+ justify-items: center;
+}
+
+/* Flip Card Container */
+.flip-card {
+ background-color: transparent;
+ width: 350px;
+ height: 450px;
+ perspective: 1000px; /* 3D perspective */
+}
+
+.flip-card-inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ transition: transform 0.6s,box-shadow 0.6s;
+ transform-style: preserve-3d;
+ border-radius: 15px;
+ box-shadow: 0 4px 20px rgba(46, 247, 225, 0.3);
+}
+
+.flip-card:hover .flip-card-inner {
+ transform: rotateY(180deg);  
+ box-shadow: 0 4px 20px rgba(255, 79, 193, 0.6); /* shadow changes on hover */
+
+}
+
+/* Front of the card */
+.flip-card-front, .flip-card-back {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ border-radius: 15px;
+ overflow: hidden;
+}
+
+.flip-card-front img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+/* Back of the card */
+.flip-card-back {
+ background: rgba(36, 41, 78, 0.95); /* dark overlay for readability */
+ color: #fff;
+ transform: rotateY(180deg);
+ border-radius: 15px;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 1rem;
+ box-sizing: border-box;
+ backdrop-filter: blur(4px); /* optional blur for background image */
+}
+
+.back-content {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+}
+
+.flip-card-back h3 {
+ color: #ff4fc1;
+ margin-bottom: 0.5rem;
+ font-size: 1.2rem;
+}
+
+.flip-card-back ul {
+ list-style-type: disc;
+ padding-left: 1rem;
+ margin: 0;
+ flex-grow: 1;
+ overflow-y: auto;
+ max-height: 280px; /* scroll if tips are long */
+}
+
+.flip-card-back li {
+ margin-bottom: 0.5rem;
+ color: #e0e0e0;
+ font-size: 0.95rem;
+}
+
+.flip-card-back p {
+ font-size: 0.85rem;
+ color: #9aa2d0;
+ margin-top: 0.5rem;
+}
+
+.delete-btn {
+ margin-top: 0.5rem;
+ padding: 0.5rem;
+ border: none;
+ border-radius: 8px;
+ background: linear-gradient(90deg, #ff4fc1, #2ef7e1);
+ color: #fff;
+ cursor: pointer;
+ align-self: flex-end;
+}
+
+.empty-msg {
+ color: #ccc;
+ margin-top: 3rem;
+}
+.flip-card-back ul::-webkit-scrollbar {
+ width: 8px;
+}
+
+.flip-card-back ul::-webkit-scrollbar-track {
+ background: rgba(36, 41, 78, 0.6);
+ border-radius: 8px;
+}
+
+.flip-card-back ul::-webkit-scrollbar-thumb {
+ background-color: #ff4fc1;
+ border-radius: 8px;
+ border: 2px solid rgba(36, 41, 78, 0.6); /* space around thumb */
+}
+
+.flip-card-back ul::-webkit-scrollbar-thumb:hover {
+ background-color: #ff6fc1; /* slightly lighter on hover */
+}

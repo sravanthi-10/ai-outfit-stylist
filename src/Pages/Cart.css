@@ -1,0 +1,120 @@
+/* --- Cart Page --- */
+.cart-page {
+  background: linear-gradient(135deg, #1b1f39, #0a0e2a);
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-page h2 {
+  color: #4dabf7;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* --- Cart Items Container --- */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Single Cart Item Card --- */
+.cart-item {
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(255, 79, 193, 0.2);
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+ box-shadow: 0 0 25px rgba(46, 247, 225, 0.4);
+}
+
+/* --- Item Image --- */
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 1.5rem;
+}
+
+/* --- Item Details --- */
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.cart-item-details p {
+  margin: 0.3rem 0;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+
+/* --- Quantity & Price --- */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-quantity button {
+  background: #4dabf7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cart-item-quantity button:hover {
+  background: #1e90ff;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+/* --- Total Section --- */
+.cart-total {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4dabf7;
+}
+
+/* --- Remove Button --- */
+.cart-item-remove-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background: linear-gradient(135deg, #96225a, #4dabf7);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cart-item-remove-btn:hover {
+  transform: translateY(-3px);
+}
